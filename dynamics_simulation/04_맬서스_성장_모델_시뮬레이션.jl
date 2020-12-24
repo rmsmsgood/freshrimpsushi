@@ -1,8 +1,8 @@
-cd("C:/Users/rmsms/OneDrive/freshrimpsushi/dynamics_simulation") # 움짤을 만든 경로로 변경
+cd(@__DIR__) # 파일 저장 경로
 
 @time using Plots
-@time using Distributions
 @time using Random
+@time using Distributions
 @time using LinearAlgebra
 @time using DifferentialEquations
 

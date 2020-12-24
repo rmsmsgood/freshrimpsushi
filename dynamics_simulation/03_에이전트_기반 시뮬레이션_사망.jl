@@ -1,8 +1,8 @@
-cd("C:/Users/rmsms/OneDrive/freshrimpsushi/dynamics_simulation") # 움짤을 만든 경로로 변경
+cd(@__DIR__) # 파일 저장 경로
 
 @time using Plots
-@time using Distributions
 @time using Random
+@time using Distributions
 @time using LinearAlgebra
 
 N0 = 500 # 초기 인구수
@@ -10,7 +10,7 @@ d = 0.04 # 사망률
 max_iteration = 180 # 시뮬레이션 기간
 gaussian2 = MvNormal([0.0; 0.0], 0.04I) # 2차원 정규분포
 
-Random.seed!(0)
+Random.seed!(0);
 time_evolution = [] # 인구수를 기록하기 위한 스택
 let
   coordinate = rand(gaussian2, N0)'
