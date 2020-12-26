@@ -66,5 +66,6 @@ anim2 = @animate for t = 1:max_iteration
     linestyle = :dash,  color = :black,
     label = "Theoretical", legend=:bottomright)
   plot!(compare, 0.1:0.1:(t/10), time_evolution[1:t],
-    color = colorant"#111111", linewidth = 2, label = "Simulation")
+    color = colorant"#111111", linewidth = 2, label = "Simulation",
+    size = [400, 300])
 end; gif(anim2, "logistic_growth_time_evolution.gif", fps = 12)
